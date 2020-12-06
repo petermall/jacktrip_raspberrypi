@@ -1,4 +1,4 @@
-# jacktrip_rasperrypi
+# jacktrip_raspberrypi
 Config Files to set up JackTrip on Rasperry Pi
 
 We intend to provide a configuration setup to use a Raspberry Pi computer as JackTrip Client/Server.
