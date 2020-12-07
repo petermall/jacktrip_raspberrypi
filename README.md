@@ -8,3 +8,10 @@ It requires the jackaudio tools (www.github.com/jackaudio) and JackTrip (www.git
 Still at very early stage, but running...
 
 The installation of jackaudio and jacktrip as daemon builds on concepts of the Virtual Studio (app.jacktrip.org) setup.
+
+
+## Todo
+
+* Add script to configure Jack and JackTrip through webgui
+* Make scripts nice
+* Add init script to download config files from filesharing server 
