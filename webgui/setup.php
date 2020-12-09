@@ -1,13 +1,16 @@
 <?php
 
 
-$JACKAUDIO = "JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . "--period" . $_POST['period'];
+$JACKAUDIO = "JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . " --period " . $_POST['period'];
+$JACKTRIP = "JACKTRIP_OPTS=-t -z -n " . $_POST['num'] . " -C " $_POST['server'] . " --bindport " . $_POST['bindport'] . " --clientname Raspi -q " . $_POST['queue'];
 
-echo $JACKAUDIO;
+echo $JACKAUDIO; 
+echo $JACKTRIP;
 
-//exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf")
-//exec("sudo echo $JACKTRIP >> /etc/jacktrip/jackconf")
+exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf")
+exec("sudo echo $JACKTRIP >> /etc/jacktrip/jackconf")
 
+exec("sudo cat /etc/jacktrip/jackconf")
 //To be
 //JACKTRIP_OPTS=-t -z -n 2 -C server --bindport 4494 --clientname hubserver -q 2
 //JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate 44100 --period 128
@@ -33,15 +36,9 @@ Server Name: <input type="text" name="server"><br>
 Queue (2+, auto): <input type="text" name="queue", value="3"><br>
 Bindport: <input type="text" name="bindport", value="4464"><br>
 Number of channes: <input type="text" name="num", value="2"><br>
-
-
-
 <input type="submit">
 </form>
 
 <a href="index.html">Zurueck</a>
 </body>
 </html>
-
-<br>
-<a href="index.html">Zurueck</a>
