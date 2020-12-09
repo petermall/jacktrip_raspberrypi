@@ -21,12 +21,12 @@ if (isset($_POST['volume'])) {
 <h1>Jackaudio und JackTrip Setup</h1>
 
 <form action="" method="post">
-Sample rate (44100, 48000): <input type="text" name="rate", input="44100">
-period (64,128,256,1024): <input type="text" name="period", input="128">
+Sample rate (44100, 48000): <input type="text" name="rate", value="44100">
+period (64,128,256,1024): <input type="text" name="period", value="128">
 Server Name: <input type="text" name="server">
-Queue (2+, auto): <input type="text" name="queue", input="3">
-Bindport: <input type="text" name="bindport", input="4464">
-Number of channes: <input type="text" name="num", input="2">
+Queue (2+, auto): <input type="text" name="queue", value="3">
+Bindport: <input type="text" name="bindport", value="4464">
+Number of channes: <input type="text" name="num", value="2">
 
 
 <input type="submit">
