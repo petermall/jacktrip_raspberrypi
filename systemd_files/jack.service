@@ -13,7 +13,7 @@ Nice=-20
 IOSchedulingClass=realtime
 IOSchedulingPriority=0
 Environment="JACK_NO_AUDIO_RESERVATION=1"
-EnvironmentFile=/etc/jacktrip/jackaudio
+EnvironmentFile=/var/tmp/jack.conf
 ExecStart=/usr/bin/jackd $JACK_OPTS
 Restart=always
 RestartSec=5

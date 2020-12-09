@@ -14,7 +14,7 @@ IOSchedulingClass=realtime
 IOSchedulingPriority=0
 Environment="JACK_NO_AUDIO_RESERVATION=1"
 Environment="JACK_NO_START_SERVER=1"
-EnvironmentFile=/etc/jacktrip/jackaudio
+EnvironmentFile=/var/tmp/jack.conf
 ExecStartPre=jack_wait -w -t 5
 ExecStart=/usr/bin/qjacktrip $JACKTRIP_OPTS
 Restart=always
