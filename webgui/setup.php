@@ -2,15 +2,16 @@
 
 
 $JACKAUDIO = "JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . " --period " . $_POST['period'];
-$JACKTRIP = "JACKTRIP_OPTS=-t -z -n " . $_POST['num'] . " -C " . $_POST['server'] . " --bindport " . $_POST['bindport'] . " --clientname Raspi -q " . $_POST['queue'];
+$JACKTRIP = "JACKTRIP_OPTS=-t -z -n " . $_POST['num'] . " -C " . $_POST['server'] . " --bindport " . $_POST['bindport'] . " --clientname Raspi -q " . $_POST['queue'] . " --bufstrategy 1";
 
 echo $JACKAUDIO;
 echo $JACKTRIP;
 
-exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf");
-exec("sudo echo $JACKTRIP >> /etc/jacktrip/jackconf");
+exec("sudo echo $JACKAUDIO > jack.conf");
+exec("sudo echo $JACKTRIP >> jack.conf");
+exec("sudo cp jack.conf /etc/jacktrip/");
 
-exec("sudo cat /etc/jacktrip/jackconf");
+exec("sudo cat /etc/jacktrip/jack.conf");
 //To be
 //JACKTRIP_OPTS=-t -z -n 2 -C server --bindport 4494 --clientname hubserver -q 2
 //JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate 44100 --period 128
