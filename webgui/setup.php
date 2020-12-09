@@ -1,16 +1,17 @@
 <?php
 
 
-JACKAUDIO =
+JACKAUDIO = "JACKOPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . "--period" . $_POST['period']
 
-exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf")
-exec("sudo echo $JACKTRIP >> /etc/jacktrip/jackconf")
+echo $JACKAUDIO
+
+//exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf")
+//exec("sudo echo $JACKTRIP >> /etc/jacktrip/jackconf")
 
 //To be
-//_OPTS=-t -z -n 2 -C server --bindport 4494 --clientname hubserver -q 2
-//S=-R -dalsa -dhw:sndrpihifiberry --rate 44100 --period 128
+//JACKTRIP_OPTS=-t -z -n 2 -C server --bindport 4494 --clientname hubserver -q 2
+//JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate 44100 --period 128
 
-23:37:46.8
 //echo "Test <br>";
 //        exec('sudo amixer -c 1 sget ADC 2>&1', $output);
 //        var_dump($output[4]);
