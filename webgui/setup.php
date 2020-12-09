@@ -1,7 +1,7 @@
 <?php
 
 
-JACKAUDIO = "JACKOPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . "--period" . $_POST['period'];
+$JACKAUDIO = "JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . "--period" . $_POST['period'];
 
 echo $JACKAUDIO;
 
