@@ -17,7 +17,7 @@ echo $JACKAUDIO;
 //        var_dump($output[4]);
 //        echo "<br>";
 //        var_dump($output[5]);
-}
+//}
 //echo $_POST["volume"];
 
 ?>
