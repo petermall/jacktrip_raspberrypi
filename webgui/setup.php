@@ -2,9 +2,9 @@
 
 
 $JACKAUDIO = "JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . " --period " . $_POST['period'];
-$JACKTRIP = "JACKTRIP_OPTS=-t -z -n " . $_POST['num'] . " -C " $_POST['server'] . " --bindport " . $_POST['bindport'] . " --clientname Raspi -q " . $_POST['queue'];
+$JACKTRIP = "JACKTRIP_OPTS=-t -z -n " . $_POST['num'] . " -C " . $_POST['server'] . " --bindport " . $_POST['bindport'] . " --clientname Raspi -q " . $_POST['queue'];
 
-echo $JACKAUDIO; 
+echo $JACKAUDIO;
 echo $JACKTRIP;
 
 exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf")
