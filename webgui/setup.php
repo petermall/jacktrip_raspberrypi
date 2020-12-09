@@ -7,11 +7,11 @@ $JACKTRIP = "JACKTRIP_OPTS=-t -z -n " . $_POST['num'] . " -C " . $_POST['server'
 echo $JACKAUDIO;
 echo $JACKTRIP;
 
-exec("sudo echo $JACKAUDIO > jack.conf");
-exec("sudo echo $JACKTRIP >> jack.conf");
-exec("sudo cp jack.conf /etc/jacktrip/");
+exec("sudo bash -c 'echo $JACKAUDIO > /var/tmp/jack.conf'");
+exec("sudo bash -c 'echo $JACKTRIP >> /var/tmp/jack.conf'");
 
-exec("sudo cat /etc/jacktrip/jack.conf");
+exec("sudo cat /var/tmp/jack.conf");
+
 //To be
 //JACKTRIP_OPTS=-t -z -n 2 -C server --bindport 4494 --clientname hubserver -q 2
 //JACK_OPTS=-R -dalsa -dhw:sndrpihifiberry --rate 44100 --period 128
