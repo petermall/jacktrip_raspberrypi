@@ -1,9 +1,9 @@
 <?php
 
 
-JACKAUDIO = "JACKOPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . "--period" . $_POST['period']
+JACKAUDIO = "JACKOPTS=-R -dalsa -dhw:sndrpihifiberry --rate " . $_POST['rate'] . "--period" . $_POST['period'];
 
-echo $JACKAUDIO
+echo $JACKAUDIO;
 
 //exec("sudo echo $JACKAUDIO > /etc/jacktrip/jackconf")
 //exec("sudo echo $JACKTRIP >> /etc/jacktrip/jackconf")
