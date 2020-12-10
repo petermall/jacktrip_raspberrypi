@@ -13,5 +13,7 @@ The installation of jackaudio and jacktrip as daemon builds on concepts of the V
 ## Todo
 
 * Add script to configure Jack and JackTrip through webgui
-* Make scripts nice
-* Add init script to download config files from filesharing server 
+* Make scripts and frontend nice
+* update description
+* write installation script for new Raspberry Pi
+
