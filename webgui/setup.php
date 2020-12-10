@@ -9,12 +9,11 @@ echo $JACKTRIP;
 
 exec("sudo bash -c 'echo $JACKAUDIO > /var/tmp/jack.conf'");
 exec("sudo bash -c 'echo $JACKTRIP >> /var/tmp/jack.conf'");
-<<<<<<< HEAD
-//exec("sudo cp jack.conf /etc/jacktrip/");
-=======
 
-exec("sudo cat /var/tmp/jack.conf");
->>>>>>> 120a5b397babb9c4f0d125c62170f72d9b9492e9
+echo "<p>Aktuelle Einstellungen in jack.conf</p>";
+
+echo exec("sudo cat /var/tmp/jack.conf");
+
 
 //To be
 //JACKTRIP_OPTS=-t -z -n 2 -C server --bindport 4494 --clientname hubserver -q 2
