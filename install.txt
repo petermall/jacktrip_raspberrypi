@@ -1,0 +1,25 @@
+# Installation (Raspberry Pi)
+
+1. Install jackaudio with apt (jack-tools)
+2. Install Jacktrip using the guide here: www.github.com/jacktrip (we use the qjacktrip branch)
+3. Copy filed in this folder to /etc/systemd/system
+
+Edit paths to binaries and config file (here /etc/jackaudio).
+
+Start using systemctl.
+
+Enable on startup:
+
+sudo systemctl enable jack
+
+This configuration adds user jacktrip to group audio. 
+
+## Install raspap to provide accesspoint
+
+Follow instructions:
+https://github.com/billz/raspap-webgui
+
+Copy files in /webgui into folder
+
+/var/www/html/jacktrip  (or any foldername you like)
+
