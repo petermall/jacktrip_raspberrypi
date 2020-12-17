@@ -32,5 +32,9 @@ EOF
 
 wget /path/to/file -O /var/tmp/jack.conf
 
+amixer -c 1 sset 'ADC Left Input' '{VIN1P, VIN1M}[DIFF]'
+amixer -c 1 sset 'ADC Right Input' '{VIN1P, VIN1M}[DIFF]'
+
+
 #mount -o remount,ro /
 #mount -o remount,ro /boot
