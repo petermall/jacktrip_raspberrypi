@@ -36,8 +36,8 @@ cd
 
 echo "Copy Init-Scripts and start Service"
 
-cp git_webgui/systemd_files/jack*.service /etc/systems/system
-cp git_webgui/systemd_files/jack.conf /var/tmp/jack.conf
+cp jacktrip_raspberrypi/systemd_files/jack*.service /etc/systems/system
+cp jacktrip_raspberrypi/systemd_files/jack.conf /var/tmp/jack.conf
 
 ## add user jacktrip
 echo "Add User Jacktrip"
