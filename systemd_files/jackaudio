@@ -1,2 +1,0 @@
-JACK_OPTS=-dalsa -dhw:sndrpihifiberry -r44100 -p128
-JACKTRIP_OPTS=-t -z -n 2 -C SERVER_IP -q3
